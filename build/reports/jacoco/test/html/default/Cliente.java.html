@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Cliente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">poc-test-mutation</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Cliente.java</span></div><h1>Cliente.java</h1><pre class="source lang-java linenums">public class Cliente {
+
+    private int id;
+    private String nome;
+    private int idade;
+    private String email;
+    private boolean ativo;
+    private int idContaCorrente;
+
+<span class="nc" id="L10">    public Cliente(int id, String nome, int idade, String email, int idContaCorrente, boolean ativo) {</span>
+<span class="nc" id="L11">        this.id = id;</span>
+<span class="nc" id="L12">        this.nome = nome;</span>
+<span class="nc" id="L13">        this.idade = idade;</span>
+<span class="nc" id="L14">        this.email = email;</span>
+<span class="nc" id="L15">        this.idContaCorrente = idContaCorrente;</span>
+<span class="nc" id="L16">        this.ativo = ativo;</span>
+<span class="nc" id="L17">    }</span>
+
+    public int getId() {
+<span class="nc" id="L20">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="nc" id="L24">        this.id = id;</span>
+<span class="nc" id="L25">    }</span>
+
+    public String getNome() {
+<span class="nc" id="L28">        return nome;</span>
+    }
+
+    public void setNome(String nome) {
+<span class="nc" id="L32">        this.nome = nome;</span>
+<span class="nc" id="L33">    }</span>
+
+    public int getIdade() {
+<span class="nc" id="L36">        return idade;</span>
+    }
+
+    public void setIdade(int idade) {
+<span class="nc" id="L40">        this.idade = idade;</span>
+<span class="nc" id="L41">    }</span>
+
+    public String getEmail() {
+<span class="nc" id="L44">        return email;</span>
+    }
+
+    public void setEmail(String email) {
+<span class="nc" id="L48">        this.email = email;</span>
+<span class="nc" id="L49">    }</span>
+
+
+    public boolean isAtivo() {
+<span class="nc" id="L53">        return ativo;</span>
+    }
+
+    public void setAtivo(boolean ativo) {
+<span class="nc" id="L57">        this.ativo = ativo;</span>
+<span class="nc" id="L58">    }</span>
+
+    public int getIdContaCorrente() {
+<span class="nc" id="L61">        return this.idContaCorrente;</span>
+    }
+
+    public void setIdContaCorrente(int idContaCorrente) {
+<span class="nc" id="L65">        this.idContaCorrente = idContaCorrente;</span>
+<span class="nc" id="L66">    }</span>
+
+    @Override
+    public String toString() {
+
+<span class="nc" id="L71">        String str =&quot;=========================&quot;</span>
+                +&quot;Id: &quot; + this.id + &quot;\n&quot;
+                + &quot;Nome: &quot; + this.nome + &quot;\n&quot;
+                + &quot;Email: &quot; + this.email + &quot;\n&quot;
+                + &quot;Idade: &quot; + this.idade + &quot;\n&quot;
+<span class="nc bnc" id="L76" title="All 2 branches missed.">                + &quot;Status: &quot; + (ativo?&quot;Ativo&quot;:&quot;Inativo&quot;) + &quot;\n&quot;</span>
+                + &quot;=========================&quot;;
+<span class="nc" id="L78">        return str;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

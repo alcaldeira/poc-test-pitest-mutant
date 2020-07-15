@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ContaCorrente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">poc-test-mutation</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">ContaCorrente.java</span></div><h1>ContaCorrente.java</h1><pre class="source lang-java linenums">public class ContaCorrente {
+
+    private int id;
+
+    private double saldo;
+
+    private boolean ativa;
+
+<span class="nc" id="L9">    public ContaCorrente(int id, double saldo, boolean ativa) {</span>
+<span class="nc" id="L10">        this.id = id;</span>
+<span class="nc" id="L11">        this.saldo = saldo;</span>
+<span class="nc" id="L12">        this.ativa = ativa;</span>
+<span class="nc" id="L13">    }</span>
+
+    public int getId() {
+<span class="nc" id="L16">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="nc" id="L20">        this.id = id;</span>
+<span class="nc" id="L21">    }</span>
+
+    public double getSaldo() {
+<span class="nc" id="L24">        return saldo;</span>
+    }
+
+    public void setSaldo(double saldo) {
+<span class="nc" id="L28">        this.saldo = saldo;</span>
+<span class="nc" id="L29">    }</span>
+
+    public boolean isAtiva() {
+<span class="nc" id="L32">        return ativa;</span>
+    }
+
+    public void setAtiva(boolean ativa) {
+<span class="nc" id="L36">        this.ativa = ativa;</span>
+<span class="nc" id="L37">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L41">        String str = &quot;=========================&quot;</span>
+                + &quot;Id: &quot; + this.id + &quot;\n&quot;
+                + &quot;Saldo: &quot; + this.saldo + &quot;\n&quot;
+<span class="nc bnc" id="L44" title="All 2 branches missed.">                + &quot;Status: &quot; + (ativa?&quot;Ativa&quot;:&quot;Inativa&quot;) + &quot;\n&quot;</span>
+                + &quot;=========================&quot;;
+<span class="nc" id="L46">        return str;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

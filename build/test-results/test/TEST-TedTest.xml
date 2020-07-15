@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TedTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-07-15T23:38:18" hostname="NI-81628-9P" time="0.019">
+  <properties/>
+  <testcase name="testTransferValueNone" classname="TedTest" time="0.017"/>
+  <testcase name="testTedTransfer" classname="TedTest" time="0.0"/>
+  <testcase name="testTedTransferseNgativeBalance" classname="TedTest" time="0.0"/>
+  <testcase name="testTransferInsufficientBalance" classname="TedTest" time="0.0"/>
+  <testcase name="testTedTransfersNegativeBalanceValueToNegative" classname="TedTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
