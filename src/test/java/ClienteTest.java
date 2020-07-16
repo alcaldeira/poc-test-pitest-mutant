@@ -13,6 +13,7 @@ public class ClienteTest {
     private GerenciadoraClientes gerenciadorCliente;
     private int idCLiente01 = 1;
     private	int idCLiente02 = 2;
+    private	int idCLiente03 = 3;
 
     @Before
     public void setUp() {
@@ -32,7 +33,7 @@ public class ClienteTest {
 
         assertThat(cliente.getId(), is(idCLiente01));
     }
-
+    
     @Test
     public void testRemoveCliente() {
         boolean clienteRemovido = gerenciadorCliente.removeCliente(idCLiente02);

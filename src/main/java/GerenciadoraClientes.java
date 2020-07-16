@@ -14,25 +14,24 @@ public class GerenciadoraClientes {
     }
 
 
-    public Cliente pesquisaCliente (int idCliente) {
-
+    public Cliente pesquisaCliente(int idCliente) {
         for (Cliente cliente : clientesDoBanco) {
-            if(cliente.getId() == idCliente)
+            if (cliente.getId() == idCliente)
                 return cliente;
         }
         return null;
     }
 
-    public void adicionaCliente (Cliente novoCliente) {
+    public void adicionaCliente(Cliente novoCliente) {
         clientesDoBanco.add(novoCliente);
     }
 
-    public boolean removeCliente (int idCliente) {
+    public boolean removeCliente(int idCliente) {
         boolean clienteRemovido = false;
 
         for (int i = 0; i < clientesDoBanco.size(); i++) {
             Cliente cliente = clientesDoBanco.get(i);
-            if(cliente.getId() == idCliente){
+            if (cliente.getId() == idCliente) {
                 clientesDoBanco.remove(i);
                 clienteRemovido = true;
                 break;
@@ -42,13 +41,13 @@ public class GerenciadoraClientes {
         return clienteRemovido;
     }
 
-    public boolean clienteAtivo (int idCliente) {
+    public boolean clienteAtivo(int idCliente) {
         boolean clienteAtivo = false;
 
         for (int i = 0; i < clientesDoBanco.size(); i++) {
             Cliente cliente = clientesDoBanco.get(i);
-            if(cliente.getId() == idCliente)
-                if(cliente.isAtivo()){
+            if (cliente.getId() == idCliente)
+                if (cliente.isAtivo()) {
                     clienteAtivo = true;
                     break;
                 }
@@ -62,7 +61,7 @@ public class GerenciadoraClientes {
 
     public boolean validaIdade(int idade) throws IdadeNaoPermitidaException {
 
-        if(idade < 18 || idade > 65)
+        if (idade < 18 || idade > 65)
             throw new IdadeNaoPermitidaException(IdadeNaoPermitidaException.MSG_IDADE_INVALIDA);
 
         return true;

@@ -14,58 +14,57 @@ public class GerenciadoraClientes {
     }
 
 
-    public Cliente pesquisaCliente (int idCliente) {
-
-<span class="nc bnc" id="L19" title="All 2 branches missed.">        for (Cliente cliente : clientesDoBanco) {</span>
-<span class="nc bnc" id="L20" title="All 2 branches missed.">            if(cliente.getId() == idCliente)</span>
-<span class="nc" id="L21">                return cliente;</span>
-<span class="nc" id="L22">        }</span>
-<span class="nc" id="L23">        return null;</span>
+    public Cliente pesquisaCliente(int idCliente) {
+<span class="nc bnc" id="L18" title="All 2 branches missed.">        for (Cliente cliente : clientesDoBanco) {</span>
+<span class="nc bnc" id="L19" title="All 2 branches missed.">            if (cliente.getId() == idCliente)</span>
+<span class="nc" id="L20">                return cliente;</span>
+<span class="nc" id="L21">        }</span>
+<span class="nc" id="L22">        return null;</span>
     }
 
-    public void adicionaCliente (Cliente novoCliente) {
-<span class="nc" id="L27">        clientesDoBanco.add(novoCliente);</span>
-<span class="nc" id="L28">    }</span>
+    public void adicionaCliente(Cliente novoCliente) {
+<span class="nc" id="L26">        clientesDoBanco.add(novoCliente);</span>
+<span class="nc" id="L27">    }</span>
 
-    public boolean removeCliente (int idCliente) {
-<span class="nc" id="L31">        boolean clienteRemovido = false;</span>
+    public boolean removeCliente(int idCliente) {
+<span class="nc" id="L30">        boolean clienteRemovido = false;</span>
 
-<span class="nc bnc" id="L33" title="All 2 branches missed.">        for (int i = 0; i &lt; clientesDoBanco.size(); i++) {</span>
-<span class="nc" id="L34">            Cliente cliente = clientesDoBanco.get(i);</span>
-<span class="nc bnc" id="L35" title="All 2 branches missed.">            if(cliente.getId() == idCliente){</span>
-<span class="nc" id="L36">                clientesDoBanco.remove(i);</span>
-<span class="nc" id="L37">                clienteRemovido = true;</span>
-<span class="nc" id="L38">                break;</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">        for (int i = 0; i &lt; clientesDoBanco.size(); i++) {</span>
+<span class="nc" id="L33">            Cliente cliente = clientesDoBanco.get(i);</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">            if (cliente.getId() == idCliente) {</span>
+<span class="nc" id="L35">                clientesDoBanco.remove(i);</span>
+<span class="nc" id="L36">                clienteRemovido = true;</span>
+<span class="nc" id="L37">                break;</span>
             }
         }
 
-<span class="nc" id="L42">        return clienteRemovido;</span>
+<span class="nc" id="L41">        return clienteRemovido;</span>
     }
 
-    public boolean clienteAtivo (int idCliente) {
-<span class="nc" id="L46">        boolean clienteAtivo = false;</span>
+    public boolean clienteAtivo(int idCliente) {
+<span class="nc" id="L45">        boolean clienteAtivo = false;</span>
 
-<span class="nc bnc" id="L48" title="All 2 branches missed.">        for (int i = 0; i &lt; clientesDoBanco.size(); i++) {</span>
-<span class="nc" id="L49">            Cliente cliente = clientesDoBanco.get(i);</span>
-<span class="nc bnc" id="L50" title="All 2 branches missed.">            if(cliente.getId() == idCliente)</span>
-<span class="nc bnc" id="L51" title="All 2 branches missed.">                if(cliente.isAtivo()){</span>
-<span class="nc" id="L52">                    clienteAtivo = true;</span>
-<span class="nc" id="L53">                    break;</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">        for (int i = 0; i &lt; clientesDoBanco.size(); i++) {</span>
+<span class="nc" id="L48">            Cliente cliente = clientesDoBanco.get(i);</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">            if (cliente.getId() == idCliente)</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">                if (cliente.isAtivo()) {</span>
+<span class="nc" id="L51">                    clienteAtivo = true;</span>
+<span class="nc" id="L52">                    break;</span>
                 }
         }
-<span class="nc" id="L56">        return clienteAtivo;</span>
+<span class="nc" id="L55">        return clienteAtivo;</span>
     }
 
     public void limpa() {
-<span class="nc" id="L60">        this.clientesDoBanco.clear();</span>
-<span class="nc" id="L61">    }</span>
+<span class="nc" id="L59">        this.clientesDoBanco.clear();</span>
+<span class="nc" id="L60">    }</span>
 
     public boolean validaIdade(int idade) throws IdadeNaoPermitidaException {
 
-<span class="nc bnc" id="L65" title="All 4 branches missed.">        if(idade &lt; 18 || idade &gt; 65)</span>
-<span class="nc" id="L66">            throw new IdadeNaoPermitidaException(IdadeNaoPermitidaException.MSG_IDADE_INVALIDA);</span>
+<span class="nc bnc" id="L64" title="All 4 branches missed.">        if (idade &lt; 18 || idade &gt; 65)</span>
+<span class="nc" id="L65">            throw new IdadeNaoPermitidaException(IdadeNaoPermitidaException.MSG_IDADE_INVALIDA);</span>
 
-<span class="nc" id="L68">        return true;</span>
+<span class="nc" id="L67">        return true;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
